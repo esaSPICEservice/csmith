@@ -1,0 +1,23 @@
+PDS_VERSION_ID                 = PDS3                                         
+                                                                              
+FILE_NAME                      = "ROS_CAM1_20070224T191032.LBL"               
+RECORD_TYPE                    = UNDEFINED                                    
+                                                                              
+PRODUCT_ID                     = "ROS_CAM1_20070224T191032.JPG"               
+SOURCE_PRODUCT_ID              = "ROS_CAM1_20070224T191032"                   
+^BROWSE_IMAGE                  = "ROS_CAM1_20070224T191032.JPG"               
+                                                                              
+DATA_SET_ID                    = "RO-M/CAL-NAVCAM-2-MARS-V1.1"                
+INSTRUMENT_ID                  = NAVCAM                                       
+INSTRUMENT_HOST_ID             = RO                                           
+PRODUCT_CREATION_TIME          = 2016-10-24T08:12:15                          
+                                                                              
+OBJECT                         = BROWSE_IMAGE                                 
+   LINES                       = 1024                                         
+   LINE_SAMPLES                = 1024                                         
+   SAMPLE_TYPE                 = UNSIGNED_INTEGER                             
+   SAMPLE_BITS                 = 8                                            
+   ENCODING_TYPE               = JPEG                                         
+END_OBJECT                     = BROWSE_IMAGE                                 
+                                                                              
+END                                                                           
