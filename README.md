@@ -1,1 +1,1 @@
-# csmith
+# spirec
