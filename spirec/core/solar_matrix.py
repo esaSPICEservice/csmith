@@ -1,12 +1,8 @@
-import os
 import spiceypy
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import imageio
-
-from scipy.misc import imsave
 
 
 def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
@@ -43,7 +39,6 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     :rtype:
     '''
 
-
     spiceypy.furnsh(metakernel)
 
     if dsk:
@@ -53,11 +48,6 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
         method = 'ELLIPSOID'
 
     et = spiceypy.utc2et(utc)
-
-    #
-    # We set the size of the plot (not related to the actual image)
-    #
-    mpl.rcParams['figure.figsize'] = (26.0, 26.0)
 
     #
     # We retrieve the camera information using GETFOV. More info available:
@@ -79,7 +69,10 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
         observer = 'MEX'
     elif camera.split('_')[0] == 'VEX':
         observer = 'VEX'
-
+    elif camera.split('_')[0] == 'JUICE':
+        observer = 'JUICE'
+    else:
+        observer = camera
 
     #
     # We check if the resolution of the camera has been provided as an input
@@ -186,11 +179,15 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     # We generate the plot
     #
     if generate_image:
+        if dsk:
+            name = dsk.split('/')[-1].split('.')[0].lower()
+        else:
+            name = ''
         name = '{}_{}_{}.png'.format(camera.lower(),
-                                     dsk.split('/')[-1].split('.')[0].lower(),
+                                     name,
                                      utc.lower())
         imageio.imwrite(name, rescaled)
-    else:
+    #else:
         plt.imshow(rescaled, cmap='gray')
         plt.axis('off')
         plt.show()
@@ -198,27 +195,27 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     return
 
 
-target = 'PHOBOS'
-target_frame = 'IAU_PHOBOS'
-camera = 'MEX_HRSC_SRC'
-metakernel = '/Users/mcosta/MARS-EXPRESS/kernels/mk/MEX_OPS_LOCAL.TM'
-dsk = '/Users/mcosta/MARS-EXPRESS/kernels/dsk/PHOBOS_K137_DLR_V01.BDS'
-utc = '2010-08-27T20:31:56'
+target = 'JUPITER'
+target_frame = 'IAU_JUPITER'
+camera = 'JUICE_JANUS'
+metakernel = "/Users/mcosta/JUICE/kernels/mk/juice_crema_4_0_ops_local.tm"
+utc = '2030-02-08T00:20:19'
+dsk = False
 
-target = '67P/C-G'
-target_frame = '67P/C-G_CK'
-camera = 'ROS_NAVCAM-A'
-metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
-dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
-utc = '2016-02-24T14:53:39'
-
-target = '67P/C-G'
-target_frame = '67P/C-G_CK'
-camera = 'ROS_OSIRIS_WAC_DIST'
-metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
-dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
-utc = '2016-02-24T14:53:39'
+#target = '67P/C-G'
+#target_frame = '67P/C-G_CK'
+#camera = 'ROS_NAVCAM-A'
+#metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
+#dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
+#utc = '2016-02-24T14:53:39'
+#
+#target = '67P/C-G'
+#target_frame = '67P/C-G_CK'
+#camera = 'ROS_OSIRIS_WAC_DIST'
+#metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
+#dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
+#utc = '2016-02-24T14:53:39'
 
 
 plot_solar_ilum(utc=utc, metakernel=metakernel, camera=camera, target=target, target_frame=target_frame, dsk=dsk,
-                pixel_lines=100, pixel_samples=100, generate_image=True, report=True)
+                generate_image=True, report=True, pixel_lines=200, pixel_samples=200)
