@@ -7,7 +7,6 @@ from scipy.misc import imsave
 import scipy.optimize as opt
 import spiceypy
 
-
 def ilum_bin(image):
     img = imread(image, mode='L')
     print('shape of img: ', np.shape(img))
@@ -22,18 +21,53 @@ def ilum_bin(image):
     plt.imshow(img)
     plt.show()
     return img
-plane_f = ilum_bin("ROS_solar_matrix_20160131T054146.png")
-plane = ilum_bin("ROS_CAM1_20160131T054146.jpg")
+# plane = ilum_bin("ROS_CAM1_20160131T054146.jpg")
+# plane_f = ilum_bin("ROS_solar_matrix_20160131T054146.png")
+plane = ilum_bin("ROS_CAM1_20160211T112912.jpg")
+plane_f = ilum_bin("ROS_solar_matrix_20160211T112912.png")
+# plane = ilum_bin("ROS_CAM1_20160228T105856.jpg")
+# plane_f = ilum_bin("ROS_solar_matrix_20160228T105856.png")
 
 def opt_fit(plane, plane_f):
     # optimize displacement + rotation such that when substracting
     # the real and fake gradient images, the sum of the values is
     # minimized
-
+    imsave('first_guess.png', plane - plane_f)
+    #
+    # check if the real image is not completely in FOV
+    #
+    if np.count_nonzero(plane[0, :]) != 0:
+        # space from origin of rows to first illuminated pixel
+        vspace = max((np.argwhere(plane != 0))[:, 0])
+        vspace_f = max((np.argwhere(plane_f != 0))[:, 0])
+        plane_f_aux = plane_f
+        plane_f = np.zeros_like(plane_f)
+        plane_f[0:vspace, :] = plane_f_aux[vspace_f - vspace:vspace_f, :]
+    elif np.count_nonzero(plane[-1, :]) != 0:
+        # space from origin of rows to first illuminated pixel
+        vspace = min((np.argwhere(plane != 0))[:, 0])
+        vspace_f = min((np.argwhere(plane_f != 0))[:, 0])
+        plane_f_aux = plane_f
+        plane_f = np.zeros_like(plane_f)
+        plane_f[vspace:, :] = plane_f_aux[vspace_f:vspace_f + len(plane) - vspace, :]
+    if np.count_nonzero(plane[:, -1]) != 0:
+        # space from origin of columns to first illuminated pixel
+        hspace = min((np.argwhere(plane != 0))[:, 1])
+        hspace_f = min((np.argwhere(plane_f != 0))[:, 1])
+        plane_f_aux = plane_f
+        plane_f = np.zeros_like(plane_f)
+        plane_f[:, hspace:] = plane_f_aux[:, hspace_f:hspace_f + len(plane) - hspace]
+    elif np.count_nonzero(plane[:, 0]) != 0:
+        # space from origin of columns to first illuminated pixel
+        hspace = max((np.argwhere(plane != 0))[:, 1])
+        hspace_f = max((np.argwhere(plane_f != 0))[:, 1])
+        plane_f_aux = plane_f
+        plane_f = np.zeros_like(plane_f)
+        plane_f[:, 0:hspace] = plane_f_aux[:, hspace_f - hspace:hspace_f]
     #
     # increment on the size of the image to allow large displacements
     #
-    maxd = 700
+    maxd = 1000
     plane_ext = np.zeros((len(plane) + maxd, len(plane) + maxd))
     plane_f_ext = np.zeros((len(plane) + maxd, len(plane) + maxd))
     plane_ext[int(maxd/2):int(len(plane_ext)-maxd/2), int(maxd/2):int(len(plane_ext)-maxd/2)] = plane
@@ -123,17 +157,17 @@ def opt_fit(plane, plane_f):
         #
         # plot the objective function
         #
-        if plot == 1:
-            imsave('converged_illum_difference.png', C)
+        if plot == 'save':
+            imsave('convergence_images_nadir/converged_illum_difference_' + str(x0) + '.png', C)
+        elif plot == 'show':
             plt.imshow(C)
-            plt.title('iterating on illumination difference, displacement: ' + str(round(dx)) + ', ' + str(round(dy)) + ', ' + str(int(theta)))
+            plt.title('iterating on illumination difference, displacement: ' + str(round(dx)) + ', ' + str(round(dy)))
             plt.show()
         return np.count_nonzero(C)
-
     #
     # optimization technique
     #
-    def powell():
+    def optimizer():
         ''' The method is useful for calculating the local minimum of a continuous
         but complex function, especially one without an underlying mathematical
         definition, because it is not necessary to take derivatives. '''
@@ -147,9 +181,9 @@ def opt_fit(plane, plane_f):
         # print final result
         #
         print('percentaje of fitted points: ' + str((1 - fval/2 / illumpoints_avg) * 100))
-        cost_function(res.x, plane_ext, plane_f_ext, plot=1)
+        cost_function(res.x, plane_ext, plane_f_ext, plot='show')
         return res
-    res = powell()
+    res = optimizer()
     return res.x
 rotation_ang = opt_fit(plane, plane_f)
 
