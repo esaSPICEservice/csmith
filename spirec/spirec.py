@@ -4,8 +4,6 @@ from .core import simulate_image
 from .core import read_pds_label
 import glob
 
-from planetaryimage import PDS3Image
-
 import os
 import shutil
 
