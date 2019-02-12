@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import sys
+from spirec import spirec
+
+
+error_message = []
+try:
+    path = os.getcwd()
+
+    with open(os.path.join('spival.json')) as f:
+        config = json.load(f)
+
+except Exception as msg:
+    error_message.append(msg)
+    print('Error: The spirec configuration file is not available in the current directory')
+    sys.exit(1)
+
+#
+# spival is executed with the loaded configuration file
+#
+spival(config)

@@ -1,16 +1,15 @@
 import spiceypy
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import imageio
 
 
-def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
+def simulate_image(utc, metakernel, camera, target, target_frame,
                     pixel_lines=False, pixel_samples=False, dsk=False,
-                    generate_image=False, report=False):
+                    generate_image=False, plot_image=False, report=False, name=False):
     '''
 
-    :param utc: Image aquisition time in UTC format e.g.: 2016-01-01T00:00:00
+    :param utc: Image acquisition time in UTC format e.g.: 2016-01-01T00:00:00
     :type utc: str
     :param metakernel: SPICE Kernel Dataset Meta-Kernel
     :type metakernel: str
@@ -33,10 +32,15 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     :param generate_image: Flag to determine whether if the image is saved or
     plotted.
     :type generate_image: bool
-    :param report: Flag for processing repor.
+    :param plot_image: Flag to determine whether if the image is to be plotted or
+    plotted.
     :type generate_image: bool
-    :return:
-    :rtype:
+    :param report: Flag for processing report.
+    :type generate_image: bool
+    :param name: Name to be provided to the image
+    :type generate_image: str
+    :return: Name of the output image
+    :rtype: str
     '''
 
     spiceypy.furnsh(metakernel)
@@ -112,7 +116,6 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     #   https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/cspice/sincpt_c.html
     #   https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/cspice/illumf_c.html
     #
-    nocross = []
     isvisible, isiluminated = [], []
     for i, x in enumerate(xv):
         for j, y in enumerate(yv):
@@ -179,43 +182,17 @@ def plot_solar_ilum(utc, metakernel, camera, target, target_frame,
     # We generate the plot
     #
     if generate_image:
-        if dsk:
-            name = dsk.split('/')[-1].split('.')[0].lower()
-        else:
-            name = ''
-        name = '{}_{}_{}.png'.format(camera.lower(),
-                                     name,
-                                     utc.lower())
+        if not name:
+
+            name = '{}_{}_{}.png'.format(camera.lower(),
+                                         name,
+                                         utc.lower())
+
         imageio.imwrite(name, rescaled)
-    #else:
+
+    if plot_image:
         plt.imshow(rescaled, cmap='gray')
         plt.axis('off')
         plt.show()
 
-    return
-
-
-target = 'JUPITER'
-target_frame = 'IAU_JUPITER'
-camera = 'JUICE_JANUS'
-metakernel = "/Users/mcosta/JUICE/kernels/mk/juice_crema_4_0_ops_local.tm"
-utc = '2030-02-08T00:20:19'
-dsk = False
-
-#target = '67P/C-G'
-#target_frame = '67P/C-G_CK'
-#camera = 'ROS_NAVCAM-A'
-#metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
-#dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
-#utc = '2016-02-24T14:53:39'
-#
-#target = '67P/C-G'
-#target_frame = '67P/C-G_CK'
-#camera = 'ROS_OSIRIS_WAC_DIST'
-#metakernel = '/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM'
-#dsk = '/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS'
-#utc = '2016-02-24T14:53:39'
-
-
-plot_solar_ilum(utc=utc, metakernel=metakernel, camera=camera, target=target, target_frame=target_frame, dsk=dsk,
-                generate_image=True, report=True, pixel_lines=200, pixel_samples=200)
+    return name
