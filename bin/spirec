@@ -19,6 +19,6 @@ except Exception as msg:
     sys.exit(1)
 
 #
-# spival is executed with the loaded configuration file
+# spirec is executed with the loaded configuration file
 #
-spival(config)
+spirec(config)
