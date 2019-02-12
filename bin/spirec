@@ -10,7 +10,7 @@ error_message = []
 try:
     path = os.getcwd()
 
-    with open(os.path.join('spival.json')) as f:
+    with open(os.path.join('spirec.json')) as f:
         config = json.load(f)
 
 except Exception as msg:
