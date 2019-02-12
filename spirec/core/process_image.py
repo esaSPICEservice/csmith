@@ -3,7 +3,7 @@ import numpy as np
 from scipy.misc import imread
 from scipy.misc import imsave
 import scipy.optimize as opt
-from planetaryimage import PDS3Image
+#from planetaryimage import PDS3Image
 
 def ilum_bin(image, minlight=40, plot=False):
     """
@@ -19,12 +19,13 @@ def ilum_bin(image, minlight=40, plot=False):
     (not illuminated) or 1 (illuminated)
     :rtype: ndarray
     """
-    if '.IMG' in image:
-        image = PDS3Image.open(image)
-        img = imread(image.image, mode='L')
 
-    else:
-        img = imread(image, mode='L')
+    #if '.IMG' in image:
+    #    image = PDS3Image.open(image)
+    #    img = imread(image.image, mode='L')
+
+    #else:
+    img = imread(image, mode='L')
     #
     # Mode L indicates that is read in grayscale
     #
