@@ -1,0 +1,112 @@
+PDS_VERSION_ID                 = PDS3                                         
+                                                                              
+/***      FILE CHARACTERISTICS                                            ***/
+FILE_NAME                      = "ROS_CAM1_20141122T041935.LBL"               
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 2048                                         
+FILE_RECORDS                   = 1024                                         
+INTERCHANGE_FORMAT             = BINARY                                       
+                                                                              
+/***      POINTERS TO DATA OBJECTS                                        ***/
+^IMAGE                         = ("ROS_CAM1_20141122T041935.IMG",1)           
+                                                                              
+/***      IDENTIFICATION DATA ELEMENTS                                    ***/
+DATA_SET_ID                    = "RO-C-NAVCAM-2-ESC1-MTP010-V1.1"             
+DATA_SET_NAME      = "ROSETTA-ORBITER 67P NAVCAM 2 COMET ESCORT 1 MTP010 V1.1"
+PRODUCT_ID                     = "ROS_CAM1_20141122T041935"                   
+PRODUCT_CREATION_TIME          = 2016-11-24T08:38:22                          
+PRODUCT_TYPE                   = EDR                                          
+PROCESSING_LEVEL_ID            = "2"                                          
+IMAGE_TIME                     = 2014-11-22T04:19:35.542                      
+START_TIME                     = 2014-11-22T04:19:32.787                      
+STOP_TIME                      = 2014-11-22T04:19:38.297                      
+SPACECRAFT_CLOCK_START_COUNT   = "1/375250701.23561"                          
+SPACECRAFT_CLOCK_STOP_COUNT    = "1/375250706.56985"                          
+MISSION_ID                     = "ROSETTA"                                    
+MISSION_NAME                   = "INTERNATIONAL ROSETTA MISSION"              
+MISSION_PHASE_NAME             = "COMET ESCORT 1 MTP010"                      
+INSTRUMENT_HOST_ID             = RO                                           
+INSTRUMENT_HOST_NAME           = "ROSETTA-ORBITER"                            
+TARGET_NAME                    = "67P/CHURYUMOV-GERASIMENKO 1 (1969 R1)"      
+TARGET_TYPE                    = "COMET"                                      
+OBSERVATION_TYPE               = "NAVIGATION IMAGE"                           
+PRODUCER_ID                    = "ESA-ESAC"                                   
+PRODUCER_FULL_NAME             = "BERNHARD GEIGER"                            
+PRODUCER_INSTITUTION_NAME      = "EUROPEAN SPACE AGENCY-ESAC"                 
+                                                                              
+/***      INSTRUMENT RELATED PARAMETERS                                   ***/
+INSTRUMENT_ID                  = NAVCAM                                       
+INSTRUMENT_NAME                = "NAVIGATION CAMERA"                          
+INSTRUMENT_TYPE                = "CCD CAMERA"                                 
+CHANNEL_ID                     = "CAM1"                                       
+EXPOSURE_DURATION              =  5.51 <s>                                    
+DATA_QUALITY_ID                = "0"                                          
+DATA_QUALITY_DESC              = "0: Image Complete, 1: Lines Missing."       
+INSTRUMENT_MODE_ID             = "IMAGING"                                    
+INSTRUMENT_MODE_DESC           = "Instrument OPERATING MODE (from TM data)"   
+INSTRUMENT_TEMPERATURE         = (  -34.53 <degC>,   -0.37 <degC> )           
+INSTRUMENT_TEMPERATURE_POINT   = (       "CCD_T1",    "OPTICS_T7" )           
+                                                                              
+/***      ROSETTA MISSION SPECIFIC DATA DICTIONARY ENTRIES                ***/
+ROSETTA:CAM_ABSOLUTE_FRAME_NUMBER   = 152047                                  
+ROSETTA:CAM_MODE_FRAME_NUMBER       = 32                                      
+ROSETTA:CAM_COVER_POSITION          = FOC_ATT                                 
+ROSETTA:CAM_GAIN                    = HIGH                                    
+ROSETTA:CAM_DATA_VALID              = NOT_OK                                  
+ROSETTA:CAM_WINDOW_POS_ALONG_ROW    = 511                                     
+ROSETTA:CAM_WINDOW_POS_ALONG_COL    = 511                                     
+ROSETTA:CAM_MISSING_LINES           = 0                                       
+ROSETTA:PIPELINE_VERSION_ID         = "1.2.1"                                 
+                                                                              
+/***      SPACECRAFT POSITION AND POINTING (J2000)                        ***/
+COORDINATE_SYSTEM_ID           = J2000                                        
+SC_SUN_POSITION_VECTOR         = (  -247003681.545 <km>,                      
+                                     307522116.328 <km>,                      
+                                     189699743.790 <km>  )                    
+SC_TARGET_POSITION_VECTOR      = (          20.082 <km>,                      
+                                             3.714 <km>,                      
+                                            23.475 <km>  )                    
+SC_TARGET_VELOCITY_VECTOR      = (          -0.076 <m/s>,                     
+                                            -0.097 <m/s>,                     
+                                             0.077 <m/s> )                    
+TARGET_CENTER_DISTANCE         =      31.115 <km>                             
+SUB_SPACECRAFT_LATITUDE        =  -55.741228 <deg>                            
+SUB_SPACECRAFT_LONGITUDE       = -115.980252 <deg>                            
+RIGHT_ASCENSION                =   12.208740 <deg>                            
+DECLINATION                    =   46.846411 <deg>                            
+CELESTIAL_NORTH_CLOCK_ANGLE    =  233.878443 <deg>                            
+SOLAR_ELONGATION               =   87.673467 <deg>                            
+NOTE                           = "SPICE KERNELS USED:                         
+                                 NAIF0011.TLS                                 
+                                 ROS_160929_STEP.TSC                          
+                                 ROS_V26.TF                                   
+                                 RORB_DV_145_01_______00216.BSP               
+                                 RATT_DV_145_01_01____00216.BC                
+                                 CORB_DV_145_01_______00216.BSP               
+                                 CATT_DV_145_01_______00216.BC                
+                                 ROS_CHURYUMOV_V01.TF                         
+                                 DE405.BSP                                    
+The values of the keywords SC_SUN_POSITION_VECTOR, SC_TARGET_POSITION_VECTOR, 
+SC_TARGET_VELOCITY_VECTOR, CELESTIAL_NORTH_CLOCK_ANGLE, RIGHT_ASCENSION, and  
+DECLINATION are related to the equatorial J2000 inertial frame.               
+The values of SUB_SPACECRAFT_LATITUDE and SUB_SPACECRAFT_LONGITUDE refer to   
+the Cheops reference frame which is identical to the Flight Dynamics          
+body-fixed frame implicitly specified by the information provided in the      
+comet attitude file CATT.                                                     
+All values are computed for the time t = IMAGE_TIME. Distances are given in   
+<km>, velocities in <m/s>, and angles in <deg>."                              
+                                                                              
+/***      IMAGE DESCRIPTION                                               ***/
+OBJECT                         = IMAGE                                        
+   DERIVED_MAXIMUM             = 4095                                         
+   DERIVED_MINIMUM             = 228                                          
+   LINES                       = 1024                                         
+   LINE_SAMPLES                = 1024                                         
+   SAMPLE_TYPE                 = LSB_UNSIGNED_INTEGER                         
+   SAMPLE_BITS                 = 16                                           
+   SOURCE_SAMPLE_BITS          = 12                                           
+   SAMPLE_DISPLAY_DIRECTION    = "RIGHT"                                      
+   LINE_DISPLAY_DIRECTION      = "UP"                                         
+END_OBJECT                     = IMAGE                                        
+                                                                              
+END                                                                           
