@@ -103,14 +103,12 @@ def opt_fit(plane, plane_f, image, maxd = 1000):
         vspace = max((np.argwhere(plane != 0))[:, 0])
         vspace_f = max((np.argwhere(plane_f != 0))[:, 0])
 
-        dx0 = vspace - vspace_f
+        if vspace < vspace_f:
+            dx0 = vspace - vspace_f
 
-        plane_f_aux = plane_f
-        plane_f = np.zeros_like(plane_f)
+            plane_f_aux = plane_f
 
-        if vspace > vspace_f:
-            plane_f[vspace - vspace_f:vspace, :] = plane_f_aux[0:vspace_f, :]
-        else:
+            plane_f = np.zeros_like(plane_f)
             plane_f[0:vspace, :] = plane_f_aux[vspace_f - vspace:vspace_f, :]
 
 
@@ -122,14 +120,12 @@ def opt_fit(plane, plane_f, image, maxd = 1000):
         vspace = min((np.argwhere(plane != 0))[:, 0])
         vspace_f = min((np.argwhere(plane_f != 0))[:, 0])
 
-        dx0 = vspace - vspace_f
-        plane_f_aux = plane_f
-        plane_f = np.zeros_like(plane_f)
+        if vspace > vspace_f:
+            dx0 = vspace - vspace_f
 
-        if vspace < vspace_f:
-            plane_f[vspace:vspace + len(plane) - vspace_f, :] = plane_f_aux[
-                                                                vspace_f:, :]
-        else:
+            plane_f_aux = plane_f
+
+            plane_f = np.zeros_like(plane_f)
             plane_f[vspace:, :] = plane_f_aux[
                                   vspace_f:vspace_f + len(plane) - vspace, :]
 
@@ -142,15 +138,12 @@ def opt_fit(plane, plane_f, image, maxd = 1000):
         hspace = min((np.argwhere(plane != 0))[:, 1])
         hspace_f = min((np.argwhere(plane_f != 0))[:, 1])
 
-        dy0 = hspace - hspace_f
+        if hspace > hspace_f:
+            dy0 = hspace - hspace_f
 
-        plane_f_aux = plane_f
-        plane_f = np.zeros_like(plane_f)
+            plane_f_aux = plane_f
 
-        if hspace < hspace_f:
-            plane_f[:, hspace:hspace + len(plane) - hspace_f] = plane_f_aux[:,
-                                                                hspace_f:]
-        else:
+            plane_f = np.zeros_like(plane_f)
             plane_f[:, hspace:] = plane_f_aux[:,
                                   hspace_f:hspace_f + len(plane) - hspace]
 
@@ -163,15 +156,13 @@ def opt_fit(plane, plane_f, image, maxd = 1000):
         hspace = max((np.argwhere(plane != 0))[:, 1])
         hspace_f = max((np.argwhere(plane_f != 0))[:, 1])
 
-        dy0 = hspace - hspace_f
+        if hspace < hspace_f:
+            dy0 = hspace - hspace_f
 
-        plane_f_aux = plane_f
-        plane_f = np.zeros_like(plane_f)
+            plane_f_aux = plane_f
 
-        if hspace > hspace_f:
-            plane_f[:, hspace - hspace_f:hspace] = plane_f_aux[:, 0:hspace_f]
-        else:
-            plane_f[:, 0:hspace] = plane_f_aux[:, hspace_f - hspace:hspace_f]
+            plane_f = np.zeros_like(plane_f)
+            plane_f[:, 0:hspace] = plane_f_aux[:, hspace_f - hspace
 
 
     #
