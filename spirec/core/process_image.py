@@ -162,7 +162,7 @@ def opt_fit(plane, plane_f, image, maxd = 1000):
             plane_f_aux = plane_f
 
             plane_f = np.zeros_like(plane_f)
-            plane_f[:, 0:hspace] = plane_f_aux[:, hspace_f - hspace
+            plane_f[:, 0:hspace] = plane_f_aux[:, hspace_f - hspace:hspace_f]
 
 
     #
