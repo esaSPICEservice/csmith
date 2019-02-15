@@ -1,0 +1,106 @@
+PDS_VERSION_ID                 = PDS3                                         
+                                                                              
+/***      FILE CHARACTERISTICS                                            ***/
+FILE_NAME                      = "ROS_CAM1_20050304T220633.LBL"               
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 2048                                         
+FILE_RECORDS                   = 1024                                         
+INTERCHANGE_FORMAT             = BINARY                                       
+                                                                              
+/***      POINTERS TO DATA OBJECTS                                        ***/
+^IMAGE                         = ("ROS_CAM1_20050304T220633.IMG",1)           
+                                                                              
+/***      IDENTIFICATION DATA ELEMENTS                                    ***/
+DATA_SET_ID                    = "RO-E-NAVCAM-2-EAR1-V1.1"                    
+DATA_SET_NAME         = "ROSETTA-ORBITER EARTH NAVCAM 2 EARTH SWING-BY 1 V1.1"
+PRODUCT_ID                     = "ROS_CAM1_20050304T220633"                   
+PRODUCT_CREATION_TIME          = 2016-10-24T08:08:56                          
+PRODUCT_TYPE                   = EDR                                          
+PROCESSING_LEVEL_ID            = "2"                                          
+IMAGE_TIME                     = 2005-03-04T22:06:33.234                      
+START_TIME                     = 2005-03-04T22:06:33.229                      
+STOP_TIME                      = 2005-03-04T22:06:33.239                      
+SPACECRAFT_CLOCK_START_COUNT   = "1/68594773.54657"                           
+SPACECRAFT_CLOCK_STOP_COUNT    = "1/68594773.55313"                           
+MISSION_ID                     = "ROSETTA"                                    
+MISSION_NAME                   = "INTERNATIONAL ROSETTA MISSION"              
+MISSION_PHASE_NAME             = "EARTH SWING-BY 1"                           
+INSTRUMENT_HOST_ID             = RO                                           
+INSTRUMENT_HOST_NAME           = "ROSETTA-ORBITER"                            
+TARGET_NAME                    = "EARTH"                                      
+TARGET_TYPE                    = "PLANET"                                     
+OBSERVATION_TYPE               = "CRUISE IMAGE"                               
+PRODUCER_ID                    = "ESA-ESAC"                                   
+PRODUCER_FULL_NAME             = "BERNHARD GEIGER"                            
+PRODUCER_INSTITUTION_NAME      = "EUROPEAN SPACE AGENCY-ESAC"                 
+                                                                              
+/***      INSTRUMENT RELATED PARAMETERS                                   ***/
+INSTRUMENT_ID                  = NAVCAM                                       
+INSTRUMENT_NAME                = "NAVIGATION CAMERA"                          
+INSTRUMENT_TYPE                = "CCD CAMERA"                                 
+CHANNEL_ID                     = "CAM1"                                       
+EXPOSURE_DURATION              =  0.01 <s>                                    
+DATA_QUALITY_ID                = "0"                                          
+DATA_QUALITY_DESC              = "0: Image Complete, 1: Lines Missing."       
+INSTRUMENT_MODE_ID             = "IMAGING"                                    
+INSTRUMENT_MODE_DESC           = "Instrument OPERATING MODE (from TM data)"   
+INSTRUMENT_TEMPERATURE         = (  -12.57 <degC>,   23.79 <degC> )           
+INSTRUMENT_TEMPERATURE_POINT   = (       "CCD_T1",    "OPTICS_T7" )           
+                                                                              
+/***      ROSETTA MISSION SPECIFIC DATA DICTIONARY ENTRIES                ***/
+ROSETTA:CAM_ABSOLUTE_FRAME_NUMBER   = 21302                                   
+ROSETTA:CAM_MODE_FRAME_NUMBER       = 9607                                    
+ROSETTA:CAM_COVER_POSITION          = FOC_ATT                                 
+ROSETTA:CAM_GAIN                    = HIGH                                    
+ROSETTA:CAM_DATA_VALID              = OK                                      
+ROSETTA:CAM_WINDOW_POS_ALONG_ROW    = 511                                     
+ROSETTA:CAM_WINDOW_POS_ALONG_COL    = 511                                     
+ROSETTA:CAM_MISSING_LINES           = 0                                       
+ROSETTA:PIPELINE_VERSION_ID         = "1.2.0"                                 
+                                                                              
+/***      SPACECRAFT POSITION AND POINTING (J2000)                        ***/
+COORDINATE_SYSTEM_ID           = J2000                                        
+SC_SUN_POSITION_VECTOR         = (   142873638.493 <km>,                      
+                                     -36706866.349 <km>,                      
+                                     -15916796.028 <km>  )                    
+SC_TARGET_POSITION_VECTOR      = (       -6389.159 <km>,                      
+                                         -4132.304 <km>,                      
+                                         -3623.749 <km>  )                    
+SC_TARGET_VELOCITY_VECTOR      = (       -5797.243 <m/s>,                     
+                                          7473.748 <m/s>,                     
+                                          4474.222 <m/s> )                    
+TARGET_CENTER_DISTANCE         =    8427.861 <km>                             
+SUB_SPACECRAFT_LATITUDE        =   25.489809 <deg>                            
+SUB_SPACECRAFT_LONGITUDE       = -101.435732 <deg>                            
+RIGHT_ASCENSION                =  268.903380 <deg>                            
+DECLINATION                    =  -28.581469 <deg>                            
+CELESTIAL_NORTH_CLOCK_ANGLE    =  269.064094 <deg>                            
+SOLAR_ELONGATION               =   75.383688 <deg>                            
+NOTE                           = "SPICE KERNELS USED:                         
+                                 NAIF0011.TLS                                 
+                                 ROS_160929_STEP.TSC                          
+                                 ROS_V26.TF                                   
+                                 ORER_______________00031.BSP                 
+                                 ATNR_P040302093352_00127.BC                  
+                                 EARTH_000101_170107_161016.BPC               
+                                 DE405.BSP                                    
+The values of the keywords SC_SUN_POSITION_VECTOR, SC_TARGET_POSITION_VECTOR, 
+SC_TARGET_VELOCITY_VECTOR, CELESTIAL_NORTH_CLOCK_ANGLE, RIGHT_ASCENSION, and  
+DECLINATION are related to the equatorial J2000 inertial frame.               
+All values are computed for the time t = IMAGE_TIME. Distances are given in   
+<km>, velocities in <m/s>, and angles in <deg>."                              
+                                                                              
+/***      IMAGE DESCRIPTION                                               ***/
+OBJECT                         = IMAGE                                        
+   DERIVED_MAXIMUM             = 4095                                         
+   DERIVED_MINIMUM             = 230                                          
+   LINES                       = 1024                                         
+   LINE_SAMPLES                = 1024                                         
+   SAMPLE_TYPE                 = LSB_UNSIGNED_INTEGER                         
+   SAMPLE_BITS                 = 16                                           
+   SOURCE_SAMPLE_BITS          = 12                                           
+   SAMPLE_DISPLAY_DIRECTION    = "RIGHT"                                      
+   LINE_DISPLAY_DIRECTION      = "UP"                                         
+END_OBJECT                     = IMAGE                                        
+                                                                              
+END                                                                           

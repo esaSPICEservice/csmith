@@ -1,0 +1,8 @@
+{
+  "images": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-E-NAVCAM-2-EAR1-V1.1/DATA",
+  "workspace": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-E-NAVCAM-2-EAR1-V1.1",
+  "labels": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-E-NAVCAM-2-EAR1-V1.1/DATA",
+  "mk": "/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM",
+  "67P/C-G": "/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS",
+  "EARTH":""
+}

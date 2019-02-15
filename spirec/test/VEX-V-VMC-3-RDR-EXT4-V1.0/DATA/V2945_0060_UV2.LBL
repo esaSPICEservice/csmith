@@ -1,0 +1,347 @@
+PDS_VERSION_ID                    = PDS3
+
+
+
+/* FILE DATA ELEMENTS */
+
+
+
+RECORD_TYPE                       = FIXED_LENGTH
+
+RECORD_BYTES                      = 1024
+
+FILE_RECORDS                      = 527
+
+LABEL_RECORDS                     = 9
+
+
+
+/* POINTERS TO DATA OBJECTS */
+
+
+
+^IMAGE_HEADER                     = 10
+
+^IMAGE                            = 16
+
+
+
+/* PRODUCER IDENTIFICATION */
+
+
+
+PRODUCT_CREATION_TIME             = 2014-08-28T08:04:50.000Z
+
+PRODUCER_FULL_NAME                = "THOMAS ROATSCH"
+
+PRODUCER_ID                       = DLR
+
+PRODUCER_INSTITUTION_NAME         = "DEUTSCHES ZENTRUM FUER LUFT- UND 
+
+                                     RAUMFAHRT"
+
+
+
+/* DATA DESCRIPTION AND IDENTIFICATION */
+
+
+
+DATA_SET_ID                       = "VEX-V-VMC-3-RDR-EXT4-V1.0"
+
+DATA_SET_NAME                     = "VENUS EXPRESS VENUS VMC 3 EXTENSION4 
+
+                                     V1.0"
+
+DETECTOR_ID                       = VEX_VMC_UV
+
+FILE_NAME                         = "V2945_0060_UV2.IMG"
+
+INSTRUMENT_HOST_ID                = VEX
+
+INSTRUMENT_HOST_NAME              = "VENUS EXPRESS"
+
+INSTRUMENT_ID                     = VMC
+
+INSTRUMENT_NAME                   = "VENUS MONITORING CAMERA"
+
+INSTRUMENT_TYPE                   = "FRAMING CAMERA"
+
+^INSTRUMENT_DESC                  = "INSTRUMENT_DESC.TXT"
+
+MISSION_ID                        = VEX
+
+MISSION_NAME                      = "VENUS EXPRESS"
+
+MISSION_PHASE_NAME                = MTP_105
+
+PROCESSING_LEVEL_ID               = 3
+
+PRODUCT_ID                        = "V2945_0060_UV2.IMG"
+
+PRODUCT_TYPE                      = RDR
+
+RELEASE_ID                        = 0006
+
+REVISION_ID                       = 0000
+
+
+
+/* TIME RELATED INFORMATION */
+
+
+
+SPACECRAFT_CLOCK_START_COUNT      = "1/0290395769.15195"
+
+SPACECRAFT_CLOCK_STOP_COUNT       = "1/0290395769.16186"
+
+IMAGE_TIME                        = 2014-05-14T01:29:48.008Z
+
+START_TIME                        = 2014-05-14T01:29:48.000Z
+
+STOP_TIME                         = 2014-05-14T01:29:48.015Z
+
+
+
+/* ORBITAL INFORMATION */
+
+
+
+ASCENDING_NODE_LONGITUDE          = 104.16
+
+ORBIT_NUMBER                      = 2945
+
+ORBITAL_ECCENTRICITY              = 0.841
+
+ORBITAL_INCLINATION               = 89.9
+
+ORBITAL_SEMIMAJOR_AXIS            = 39445.1
+
+PERIAPSIS_ALTITUDE                = 210.3
+
+PERIAPSIS_ARGUMENT_ANGLE          = 75.55
+
+PERIAPSIS_TIME                    = 2014-05-14T02:11:18.000Z
+
+MAXIMUM_RESOLUTION                = 6712.8 <m/pixel>
+
+FOOTPRINT_POINT_LATITUDE          = (-13.9854,-15.4973,-17.0042,-17.7963,
+
+                                     -18.5601,-19.2969,-20.1604,-19.6413,
+
+                                     -19.0317,-18.3874,-17.7048,-16.9799,
+
+                                     -16.2077,-15.3822,-14.5599,-13.6044,
+
+                                     -12.5663,-12.0114,-11.4293,-10.8169,
+
+                                     -10.1706,-9.486,-8.75753,-7.97827,
+
+                                     -7.13924,-6.2285,-5.31158,-3.77327,
+
+                                     -2.70528,-1.55384,-0.295629,1.10613,
+
+                                     2.71615,4.67122,7.61852,9.53724,11.0683
+
+                                     ,12.6756,13.321,13.9229,15.4824,15.2998
+
+                                     ,15.8865,16.9385,17.4493,18.4388,19.273
+
+                                     ,20.3841,20.4093,21.6699,21.4265,
+
+                                     22.9252,23.8599,23.1159,24.2047,24.1856
+
+                                     ,25.0086,27.1631,26.1194,28.2475,
+
+                                     28.5121,27.0384,28.5174,27.8207,28.9933
+
+                                     ,28.3699,30.2649,30.8524,29.2757,
+
+                                     30.5799,29.6911,29.9919,31.2247,30.4413
+
+                                     ,32.4114,32.1862,33.2461,31.2304,
+
+                                     32.5347,31.3452,31.3231,25.7968,22.7722
+
+                                     ,20.4577,18.5242,16.8374,15.3269,
+
+                                     13.9504,12.6801,11.4964,10.3852,9.33574
+
+                                     ,8.3396,7.39012,5.61048,3.96368,2.42611
+
+                                     ,0.980259,-9.71664,-13.9854)
+
+FOOTPRINT_POINT_LONGITUDE         = (152.149,151.669,149.699,148.357,
+
+                                     146.998,145.619,143.776,142.439,141.103
+
+                                     ,139.741,138.349,136.921,135.452,
+
+                                     133.937,132.34,130.702,128.982,128.087,
+
+                                     127.164,126.211,125.222,124.193,123.118
+
+                                     ,121.989,120.795,119.524,118.139,
+
+                                     116.719,115.962,115.124,114.183,113.098
+
+                                     ,111.802,110.149,107.559,105.671,
+
+                                     104.797,105.266,106.523,107.698,107.925
+
+                                     ,109.636,110.589,111.117,112.037,
+
+                                     112.537,114.339,114.663,115.788,117.056
+
+                                     ,118.267,118.258,119.626,121.072,
+
+                                     121.323,123.149,124.416,124.89,127.131,
+
+                                     126.808,128.299,129.801,130.635,131.687
+
+                                     ,131.917,133.619,133.57,135.483,136.734
+
+                                     ,137.65,138.591,139.801,140.104,141.592
+
+                                     ,141.73,143.7,144.729,145.728,146.719,
+
+                                     147.494,148.666,149.629,150.204,150.669
+
+                                     ,151.073,151.438,151.776,152.092,
+
+                                     152.392,152.678,152.952,153.217,153.474
+
+                                     ,153.724,154.205,154.666,155.111,
+
+                                     155.544,153.27,152.149)
+
+SPACECRAFT_ORIENTATION            = (-0.466124,-0.00505125,-0.884705)
+
+^SPACECRAFT_ORIENTATION_DESC      = "VEX_ORIENTATION_DESC.TXT"
+
+SPACECRAFT_POINTING_MODE          = INERT
+
+^SPACECRAFT_POINTING_MODE_DESC    = "VEX_POINTING_MODE_DESC.TXT"
+
+
+
+/* TARGET IDENTIFICATION */
+
+
+
+TARGET_TYPE                       = PLANET
+
+TARGET_NAME                       = VENUS
+
+RIGHT_ASCENSION                   = 293.2
+
+DECLINATION                       = 27.95
+
+SPACECRAFT_SOLAR_DISTANCE         = 1.08937e+08
+
+
+
+/* SCIENCE OPERATIONS INFORMATION */
+
+
+
+VEX:SCIENCE_CASE_ID               = "1"
+
+VEX:SCIENCE_CASE_ID_DESC          = "See information in 
+
+                                     DOCUMENT/VEX_SCIENCE_CASE_ID_DESC.TXT"
+
+OBSERVATION_TYPE                  = AD005A
+
+^OBSERVATION_TYPE_DESC            = "OBSERVATION_TYPE_DESC.TXT"
+
+
+
+/* INSTRUMENT INFORMATION */
+
+
+
+EXPOSURE_DURATION                 = 15.12 <ms>
+
+INST_CMPRS_NAME                   = NONE
+
+INST_CMPRS_RATIO                  = 1.0
+
+INST_CMPRS_QUALITY                = 0
+
+MACROPIXEL_SIZE                   = 1
+
+LINE_FIRST_PIXEL                  = 513
+
+SAMPLE_FIRST_PIXEL                = 513
+
+DETECTOR_TEMPERATURE              = 20.0 <degC>
+
+
+
+/* RADIOMETRIC DATA INFORMATION */
+
+
+
+RADIANCE_OFFSET                   = 0.0 <W*m**-3*sr**-1>
+
+RADIANCE_SCALING_FACTOR           = 77381.0 <W*m**-3*sr**-1>
+
+
+
+/* DATA OBJECT DEFINITIONS */
+
+
+
+OBJECT                            = IMAGE
+
+  INTERCHANGE_FORMAT              = BINARY
+
+  LINES                           = 512
+
+  LINE_SAMPLES                    = 512
+
+  SAMPLE_TYPE                     = MSB_INTEGER
+
+  SAMPLE_BITS                     = 16
+
+  BANDS                           = 1
+
+  BAND_STORAGE_TYPE               = BAND_SEQUENTIAL
+
+  MAXIMUM                         = 5510
+
+  MEAN                            = 1340.8
+
+  MINIMUM                         = 0
+
+  STANDARD_DEVIATION              = 1362.0
+
+END_OBJECT                        = IMAGE
+
+
+
+/* IMAGE HEADER DATA ELEMENTS */
+
+
+
+OBJECT                         = IMAGE_HEADER
+
+ HEADER_TYPE                   = VICAR2
+
+ INTERCHANGE_FORMAT            = ASCII
+
+ BYTES                         = 6144
+
+ ^DESCRIPTION                  = "VICAR2.TXT"
+
+END_OBJECT                     = IMAGE_HEADER
+
+END
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                      LBLSIZE=6144            FORMAT='HALF'  TYPE='IMAGE'  BUFSIZ=1024  DIM=3  EOL=0  RECSIZE=1024  ORG='BSQ'  NL=512  NS=512  NB=1  N1=512  N2=512  N3=1  N4=0  NBB=0  NLB=0  HOST='JAVA'  INTFMT='HIGH'  REALFMT='RIEEE'  BHOST='VAX-VMS'  BINTFMT='LOW'  BREALFMT='VAX'  BLTYPE=''  COMPRESS='NONE'  EOCI1=0  EOCI2=0  PROPERTY='VEX_ORBIT'  ORBIT_NUMBER=2945  ASCENDING_NODE_LONGITUDE=104.16  ORBITAL_ECCENTRICITY=0.841  ORBITAL_INCLINATION=89.9  PERIAPSIS_ARGUMENT_ANGLE=75.55  PERIAPSIS_TIME='2014-05-14T02:11:18.000Z'  PERIAPSIS_ALTITUDE=210.3  ORBITAL_SEMIMAJOR_AXIS=39445.1  SPACECRAFT_SOLAR_DISTANCE=1.08937e+08  SPACECRAFT_CLOCK_START_COUNT='1/0290395769.15195'  SPACECRAFT_CLOCK_STOP_COUNT='1/0290395769.16186'  START_TIME='2014-05-14T01:29:48.000Z'  STOP_TIME='2014-05-14T01:29:48.015Z'  IMAGE_TIME='2014-05-14T01:29:48.008Z'  SPACECRAFT_POINTING_MODE='INERT'  SPACECRAFT_ORIENTATION=(-0.466124,-0.00505125,-0.884705)  SPACECRAFT_ORIENTATI
+ON_DESC='VEX_ORIENTATION_DESC.TXT'  SPACECRAFT_POINTING_MODE_DESC='VEX_POINTING_MODE_DESC.TXT'  RIGHT_ASCENSION=293.2  DECLINATION=27.95  PROPERTY='FILE'  SCIENCE_CASE_ID=1  OBSERVATION_TYPE='AD005A'  TARGET_TYPE='PLANET'  FILE_NAME='v2945_0060.uv2.01'  PRODUCT_ID='v2945_0060.uv2.01'  MISSION_PHASE_NAME='MTP_105'  PRODUCT_CREATION_TIME='2014-08-28T08:04:50.000Z'  DATA_SET_ID='VEX-V-VMC-3-RDR-EXT4-V1.0'  DATA_SET_NAME='VENUS EXPRESS VENUS VMC 3 EXTENSION4 V1.0'  PROCESSING_LEVEL_ID=3  PRODUCER_ID='DLR'  PRODUCER_FULL_NAME='THOMAS ROATSCH'  PRODUCER_INSTITUTION_NAME='DEUTSCHES ZENTRUM FUER LUFT- UND RAUMFAHRT'  PRODUCT_TYPE='RDR'  SCIENCE_CASE_ID_DESC='See information in DOCUMENT/VEX_SCIENCE_CASE_ID_DESC.TXT'  OBSERVATION_TYPE_DESC='OBSERVATION_TYPE_DESC.TXT'  RELEASE_ID='0006'  REVISION_ID='0000'  PROPERTY='VEX_INSTRUMENT'  INSTRUMENT_HOST_NAME='VENUS EXPRESS'  INSTRUMENT_HOST_ID='VEX'  INSTRUMENT_NAME='VENUS MONITORING CAMERA'  INSTRUMENT_ID='VMC'  EXPOSURE_DURATION=15.12  EXPOSURE_DURATION__UNIT='ms'  INST_
+CMPRS_RATIO=1.0  INST_CMPRS_QUALITY=0  INST_CMPRS_NAME='NONE'  MACROPIXEL_SIZE=1  LINE_FIRST_PIXEL=513  SAMPLE_FIRST_PIXEL=513  DETECTOR_ID='VEX_VMC_UV'  MISSION_NAME='VENUS EXPRESS'  MISSION_ID='VEX'  INSTRUMENT_TYPE='FRAMING CAMERA'  INSTRUMENT_DESC='INSTRUMENT_DESC.TXT'  PROPERTY='MAP'  TARGET_NAME='VENUS'  PROPERTY='HOUSEK'  T_CCD=20.0  T_CCD__UNIT='degC'  T_POC=56.0  T_POC__UNIT='degC'  PROPERTY='FOOTPRINT'  FOOTPRINT_POINT_LATITUDE=(-13.9854,-15.4973,-17.0042,-17.7963,-18.5601,-19.2969,-20.1604,-19.6413,-19.0317,-18.3874,-17.7048,-16.9799,-16.2077,-15.3822,-14.5599,-13.6044,-12.5663,-12.0114,-11.4293,-10.8169,-10.1706,-9.486,-8.75753,-7.97827,-7.13924,-6.2285,-5.31158,-3.77327,-2.70528,-1.55384,-0.295629,1.10613,2.71615,4.67122,7.61852,9.53724,11.0683,12.6756,13.321,13.9229,15.4824,15.2998,15.8865,16.9385,17.4493,18.4388,19.273,20.3841,20.4093,21.6699,21.4265,22.9252,23.8599,23.1159,24.2047,24.1856,25.0086,27.1631,26.1194,28.2475,28.5121,27.0384,28.5174,27.8207,28.9933,28.3699,30.2649,30.8524,29.2757,3
+0.5799,29.6911,29.9919,31.2247,30.4413,32.4114,32.1862,33.2461,31.2304,32.5347,31.3452,31.3231,25.7968,22.7722,20.4577,18.5242,16.8374,15.3269,13.9504,12.6801,11.4964,10.3852,9.33574,8.3396,7.39012,5.61048,3.96368,2.42611,0.980259,-9.71664,-13.9854)  FOOTPRINT_POINT_LONGITUDE=(152.149,151.669,149.699,148.357,146.998,145.619,143.776,142.439,141.103,139.741,138.349,136.921,135.452,133.937,132.34,130.702,128.982,128.087,127.164,126.211,125.222,124.193,123.118,121.989,120.795,119.524,118.139,116.719,115.962,115.124,114.183,113.098,111.802,110.149,107.559,105.671,104.797,105.266,106.523,107.698,107.925,109.636,110.589,111.117,112.037,112.537,114.339,114.663,115.788,117.056,118.267,118.258,119.626,121.072,121.323,123.149,124.416,124.89,127.131,126.808,128.299,129.801,130.635,131.687,131.917,133.619,133.57,135.483,136.734,137.65,138.591,139.801,140.104,141.592,141.73,143.7,144.729,145.728,146.719,147.494,148.666,149.629,150.204,150.669,151.073,151.438,151.776,152.092,152.392,152.678,152.952,153.217,153.474,153.724,
+154.205,154.666,155.111,155.544,153.27,152.149)  TASK='VMCONVER'  USER='mexsyst'  DAT_TIM='Fri May 23 00:17:21 2014'  DETECTOR_TEMPERATURE=20.0  DETECTOR_TEMPERATURE__UNIT='degC'  SOURCE_FILE_NAME='vo2945_img.ccs'  CP_IMAGE_ID=2945061  SPICE_FILE_NAME=('naif0010.tls','VEX_140516_STEP.TSC','ORVV_MERGED_70000.ORB')  SPICE_FILE_ID='(LSK,SCLK,ON)'  ONBOARD_TIME='2014-05-14T01:29:54.741Z'  TASK='VMCATLAB'  USER='mexsyst'  DAT_TIM='Fri May 23 00:17:25 2014'  TASK='VMCAL'  USER='mexsyst'  DAT_TIM='Fri May 23 00:18:00 2014'  HOT_PIXEL_CORRECTION_FLAG='Y'  DARK_CURRENT_CORRECTION_FLAG='Y'  RADIANCE_SCALING_FACTOR=77381.0  RADIANCE_SCALING_FACTOR__UNIT='W*m**-3*sr**-1'  RADIANCE_OFFSET=0.0  RADIANCE_OFFSET__UNIT='W*m**-3*sr**-1'  FLAT_FIELD_CORRECTION_FLAG='Y'  STRAY_LIGHT_CORRECTION_FLAG='N'  MINIMUM=0  MAXIMUM=5510  MEAN=1340.8  STANDARD_DEVIATION=1362.0  OVERFLOW_VALUE=5511  INVALID_PIXEL_COUNT=0  ADDITIONAL_FLAT_FIELD_CORRECTION='Y'  BLEMISH_CORRECTION_FLAG='Y'  TASK='FRAMEFOO'  USER='mexsyst'  DAT_TIM='Fri May 23
+ 00:53:11 2014'  GCALMODE='IMAGE'  SPICE_FILE_NAME=('pck00008_VMC.tpc','VEX_VMC_V04.TI','VEX_V99.TF','vex_all.bsp','de421.bsp','VEX_140516_STEP.TSC','vex_all.bc','naif0010.tls')  SPICE_FILE_ID='(PCK,IK,FK,SPK,SPK,SCLK,CK,LSK)'  HEIGHT_OF_TOPOGRAPHY=0.0  BEST_GROUND_SAMPLING_DISTANCE=6.7128  CENTRIC_LATITUDE_AT_CENTER=-2.55814  EASTERN_LONGITUDE_AT_CENTER=138.256  PHASE_AT_CENTER=49.2524  INCIDENCE_AT_CENTER=39.1215  EMISSION_AT_CENTER=51.9732  SOLAR_LONGITUDE=69.9427  LOCAL_HOUR_ANGLE=218.804  LOCAL_TIME='14:35:13'  SPACECRAFT_ALTITUDE=9325.12  SPACECRAFT_CENTRIC_LATITUDE=-31.9515  SPACECRAFT_EASTERN_LONGITUDE=155.993  FOOTPRINT_POSITIVE_LONGITUDE='EAST'  CLOCK_TOLERANCE=-999.9  TASK='LABEL'  USER='mexsyst'  DAT_TIM='Thu Aug 28 22:16:12 2014'  MAXIMUM_RESOLUTION=6712.8  MAXIMUM_RESOLUTION__UNIT='m/pixel'  

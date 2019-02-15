@@ -1,0 +1,8 @@
+{
+  "images": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-C-OSIWAC-3-EXT3-67PCHURYUMOV-M33-V1.0/DATA",
+  "workspace": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-C-OSIWAC-3-EXT3-67PCHURYUMOV-M33-V1.0",
+  "labels": "/Users/mcosta/Dropbox/SPICE/SPICE_CROSS_MISSION/spirec/spirec/test/RO-C-OSIWAC-3-EXT3-67PCHURYUMOV-M33-V1.0/DATA",
+  "mk": "/Users/mcosta/ROSETTA/kernels/mk/ROS_OPS_LOCAL.TM",
+  "67P/C-G": "/Users/mcosta/ROSETTA/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.BDS",
+  "EARTH":""
+}

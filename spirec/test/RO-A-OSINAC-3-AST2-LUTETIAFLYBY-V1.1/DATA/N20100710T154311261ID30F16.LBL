@@ -1,0 +1,393 @@
+PDS_VERSION_ID                             = PDS3
+LABEL_REVISION_NOTE                        = "V3k Apr 4 2011 SFH - $Rev: 540 $"
+
+/* FILE CHARACTERISTICS */
+
+RECORD_TYPE                                = "FIXED_LENGTH"
+RECORD_BYTES                               = 512
+FILE_RECORDS                               = 73783
+LABEL_RECORDS                              = 44
+FILE_NAME                                  = "N20100710T154311261ID30F16.IMG"
+
+/* POINTERS TO DATA OBJECTS */
+
+^SIGMA_MAP_IMAGE                           = 41016
+^QUALITY_MAP_IMAGE                         = 32824
+^HISTORY                                   = 45
+^IMAGE                                     = 56
+
+/* SOFTWARE */
+
+SOFTWARE_DESC                              = "Osiris level 1 PDS file generator"
+SOFTWARE_NAME                              = "tmi2pds.exe"
+SOFTWARE_VERSION_ID                        = "V3.0.0.11"
+SOFTWARE_RELEASE_DATE                      = 2011-04-13
+
+/* MISSION IDENTIFICATION */
+
+INSTRUMENT_HOST_ID                         = "RO"
+INSTRUMENT_HOST_NAME                       = "ROSETTA-ORBITER"
+MISSION_ID                                 = "ROSETTA"
+MISSION_NAME                               = "INTERNATIONAL ROSETTA MISSION"
+MISSION_PHASE_NAME                         = "LUTETIA FLY-BY"
+
+/* INSTRUMENT DESCRIPTION */
+
+INSTRUMENT_ID                              = "OSINAC"
+INSTRUMENT_NAME                            = "OSIRIS - NARROW ANGLE CAMERA"
+INSTRUMENT_TYPE                            = "FRAME CCD REFLECTING TELESCOPE"
+DETECTOR_DESC                              = "2048x2048 PIXELS BACKLIT FRAME CCD DETECTOR"
+DETECTOR_PIXEL_WIDTH                       = 13.500000 <MICRON>
+DETECTOR_PIXEL_HEIGHT                      = 13.500000 <MICRON>
+DETECTOR_TYPE                              = "SI CCD"
+DETECTOR_ID                                = "EEV-243"
+DETECTOR_TEMPERATURE                       = 149.693227 <K>
+ELEVATION_FOV                              = 2.341000 <DEGREES>
+AZIMUTH_FOV                                = 2.197000 <DEGREES>
+TELESCOPE_RESOLUTION                       = 0.000019 <RAD>
+TELESCOPE_F_NUMBER                         = 8.000000
+TELESCOPE_FOCAL_LENGTH                     = 0.716800 <m>
+
+/* IMAGE IDENTIFICATION */
+
+IMAGE_ID                                   = "281133000"
+IMAGE_OBSERVATION_TYPE                     = "REGULAR"
+EXPOSURE_TYPE                              = "MANUAL"
+PRODUCT_ID                                 = "N20100710T154311261ID30F16"
+PRODUCT_TYPE                               = "RDR"
+PRODUCT_VERSION_ID                         = "1"
+PRODUCER_INSTITUTION_NAME                  = "Max Planck Institute for Solar System Research"
+PRODUCER_FULL_NAME                         = "STUBBE F. HVIID"
+PRODUCER_ID                                = "MPS"
+MEDIUM_TYPE                                = "ELECTRONIC"
+PUBLICATION_DATE                           = 2011-05-13
+DATA_SET_ID                                = "RO-A-OSINAC-3-AST2-LUTETIAFLYBY-V1.1"
+DATA_SET_NAME                              = "ROSETTA-ORBITER LUTETIA FLY-BY OSINAC 3 RDR DATA"
+PROCESSING_LEVEL_ID                        = "3"
+PROCESSING_LEVEL_DESC                      = "Radiometrically Calibrated Data"
+DATA_QUALITY_ID                            = "N/A"
+DATA_QUALITY_DESC                          = "Not defined - please see QUALITY_MAP_IMAGE object"
+
+/* TIME IDENTIFICATION */
+
+PRODUCT_CREATION_TIME                      = 2011-05-13T10:05:34
+START_TIME                                 = 2010-07-10T15:43:30.221
+STOP_TIME                                  = 2010-07-10T15:43:30.429
+SPACECRAFT_CLOCK_START_COUNT               = "1/237397369:17168"
+SPACECRAFT_CLOCK_STOP_COUNT                = "1/237397369:21040"
+
+/* GEOMETRY 
+
+The values of the keywords SC_SUN_POSITION_VECTOR SC_TARGET_POSITION_VECTOR and SC_TARGET_VELOCITY_VECTOR are related to the Earth Mean Equator J2000 reference frame.
+The values of SUB_SPACECRAFT_LATITUDE and  SUB_SPACECRAFT_LONGITUDE are northern latitude and eastern longitude in the  standard planetocentric IAU_<TARGET_NAME> frame.
+All values are computed for the time t= START_TIME.
+Distances are given in <km> velocities in <km/s>, Angles in <deg>.
+*/
+
+SC_SUN_POSITION_VECTOR                     = (401054315.915021 <km>, 68121698.124886 <km>, 7034775.466054 <km>)
+SPACECRAFT_SOLAR_DISTANCE                  = 406859457.473144 <km>
+SOLAR_ELONGATION                           = 122.348526 <deg>
+RIGHT_ASCENSION                            = 246.875886 <deg>
+DECLINATION                                = -10.586387 <deg>
+NORTH_AZIMUTH                              = 12.052934 <deg>
+TARGET_NAME                                = "21 LUTETIA"
+TARGET_TYPE                                = "ASTEROID"
+LIGHT_SOURCE_PHASE_ANGLE                   = 57.079074 <deg>
+SC_TARGET_POSITION_VECTOR                  = (-1348.647768 <km>, -3071.243038 <km>, -625.643516 <km>)
+SC_TARGET_VELOCITY_VECTOR                  = (14.986441 <km/s>, -0.313457 <km/s>, -0.386914 <km/s>)
+TARGET_CENTER_DISTANCE                     = 3412.156856 <km>
+SUB_SPACECRAFT_LATITUDE                    = NULL
+SUB_SPACECRAFT_LONGITUDE                   = NULL
+SPACECRAFT_ALTITUDE                        = 3365.011492 <km>
+
+/* COORDINATE SYSTEMS */
+
+GROUP                                      = SC_COORDINATE_SYSTEM
+  COORDINATE_SYSTEM_NAME                     = "S/C-COORDS"
+  ORIGIN_OFFSET_VECTOR                       = (-401037224.350194 <km>, -68118794.273726 <km>, -7034475.304885 <km>)
+  ORIGIN_ROTATION_QUATERNION                 = (0.159533, 0.618620, -0.760546, 0.115883)
+  QUATERNION_DESC                            = "J2000 to Rosetta Coordinate System quaternion [nx sin(a/2), ny sin(a/2), nz sin(a/2), cos(a/2)]"
+  REFERENCE_COORD_SYSTEM_NAME                = "EME J2000"
+END_GROUP                                  = SC_COORDINATE_SYSTEM
+GROUP                                      = CAMERA_COORDINATE_SYSTEM
+  COORDINATE_SYSTEM_NAME                     = "NAC_CAMERA_FRAME"
+  ORIGIN_OFFSET_VECTOR                       = (-0.001052 <km>, -0.000325 <km>, 0.002429 <km>)
+  ORIGIN_ROTATION_QUATERNION                 = (-0.000073, 0.000238, -0.707247, -0.706967)
+  QUATERNION_DESC                            = "Rosetta Coordinate System to camera coordinate system quaternion [nx sin(a/2), ny sin(a/2), nz sin(a/2), cos(a/2)]"
+  REFERENCE_COORD_SYSTEM_NAME                = "S/C-COORDS"
+END_GROUP                                  = CAMERA_COORDINATE_SYSTEM
+SPICE_FILE_NAME                            = ("NAIF0009.TLS", "ROS_110222_STEP.TSC", "ATNR_P040302093352_00123.BC", "ORHR_______________00122.BSP", "PCK00009.TPC", "ROS_V17.TF", "mar033_2000-2025.bsp", "DE405.BSP", "2867_STEINS_2004_2016.BSP", "21_LUTETIA_2004_2016.BSP", "Tempel1-9p-39.bsp", "ORHO_______________00077.BSP", "ORHS_______________00109.BSP", "ORHW_______________00016.BSP", "C2001Q4.bsp", "C2002T7.bsp", "TEMPEL1-9P-DI-P.BSP", "P2010A2.bsp", "Vesta-2004-2015.bsp", "C2004Q2.bsp")
+
+/* DISPLAY INFORMATION */
+
+SAMPLE_DISPLAY_DIRECTION                   = LEFT
+LINE_DISPLAY_DIRECTION                     = DOWN
+
+/* STATUS FLAGS */
+
+GROUP                                      = SR_STATUS_FLAGS
+  ROSETTA:SHUTTER_FOUND_IN_ERROR_FLAG        = FALSE
+  ROSETTA:SHUTTER_PRE_INIT_FAILED_FLAG       = FALSE
+  ROSETTA:ERROR_RECOVERY_FAILED_FLAG         = FALSE
+  ROSETTA:EXPOSURE_STATUS_ID                 = SUCCESS
+END_GROUP                                  = SR_STATUS_FLAGS
+
+/* MECHANISM STATUS FLAGS */
+
+GROUP                                      = SR_MECHANISM_STATUS
+  FILTER_NUMBER                              = "16"
+  FILTER_NAME                                = "FFP-UV_Near-UV"
+  ROSETTA:FRONT_DOOR_STATUS_ID               = OPEN
+END_GROUP                                  = SR_MECHANISM_STATUS
+
+/* IMAGE ACQUISITION OPTIONS */
+
+GROUP                                      = SR_ACQUIRE_OPTIONS
+  ROSETTA:SCIENCE_DATA_LINK                  = HIGHSPEED
+  ROSETTA:DATA_ROUTING_ID                    = QUEUE1
+  EXPOSURE_DURATION                          = 0.208000 <s>
+  ROSETTA:COMMANDED_FILTER_NUMBER            = "16"
+  ROSETTA:COMMANDED_FILTER_NAME              = "FFP-UV_Near-UV"
+  ROSETTA:GRAYSCALE_TESTMODE_FLAG            = FALSE
+  ROSETTA:HARDWARE_BINNING_ID                = '1x1'
+  ROSETTA:AMPLIFIER_ID                       = BOTH
+  ROSETTA:GAIN_ID                            = HIGH
+  ROSETTA:ADC_ID                             = TANDEM
+  ROSETTA:OVERCLOCKING_LINES_FLAG            = FALSE
+  ROSETTA:OVERCLOCKING_PIXELS_FLAG           = FALSE
+  ROSETTA:CCD_ENABLED_FLAG                   = TRUE
+  ROSETTA:ADC_ENABLED_FLAG                   = TRUE
+  ROSETTA:BLADE1_PULSES_ENABLED_FLAG         = TRUE
+  ROSETTA:BLADE2_PULSES_ENABLED_FLAG         = TRUE
+  ROSETTA:BULBMODE_ENABLED_FLAG              = FALSE
+  ROSETTA:FRAMETRANSFER_ENABLED_FLAG         = FALSE
+  ROSETTA:WINDOWING_ENABLED_FLAG             = TRUE
+  ROSETTA:SHUTTER_ENABLED_FLAG               = TRUE
+  ROSETTA:DITHERING_ENABLED_FLAG             = FALSE
+  ROSETTA:CRB_DUMP_MODE                      = 0
+  ROSETTA:CRB_PULSE_MODE                     = 0
+  ROSETTA:SUBFRAME_COORDINATE_ID             = ELECTRICAL
+  NOTE                                       = "Do not use X_START, X_END, Y_START, Y_END for subframe determination"
+  ROSETTA:X_START                            = 0
+  ROSETTA:X_END                              = 2048
+  ROSETTA:Y_START                            = 0
+  ROSETTA:Y_END                              = 2048
+  ROSETTA:SHUTTER_PRETRIGGER_DURATION        = 0.250000 <s>
+  ROSETTA:CRB_TO_PCM_SYNC_MODE               = 17
+  ROSETTA:AUTOEXPOSURE_FLAG                  = FALSE
+  ROSETTA:LOWPOWER_MODE_FLAG                 = FALSE
+  ROSETTA:DUAL_EXPOSURE_FLAG                 = FALSE
+END_GROUP                                  = SR_ACQUIRE_OPTIONS
+
+/* SHUTTER CONFIG */
+
+GROUP                                      = SR_SHUTTER_CONFIG
+  ROSETTA:PROFILE_ID                         = "4294967295"
+  ROSETTA:CONTROL_MASK                       = 16#3A#
+  ROSETTA:TESTMODE_FLAG                      = TRUE
+  ROSETTA:ZEROPULSE_FLAG                     = TRUE
+END_GROUP                                  = SR_SHUTTER_CONFIG
+
+/* SHUTTER STATUS */
+
+GROUP                                      = SR_SHUTTER_STATUS
+  ROSETTA:STATUS_MASK                        = 16#6000600#
+  ROSETTA:ERROR_TYPE_ID                      = NONE
+END_GROUP                                  = SR_SHUTTER_STATUS
+
+/* DATA COMPRESSION AND SEGMENTATION */
+
+GROUP                                      = SR_COMPRESSION
+  ROSETTA:SEGMENT_X                          = (0, 512, 1024, 1536, 0, 512, 1024, 1536, 0, 512, 1024, 1536, 0, 512, 1024, 1536)
+  ROSETTA:SEGMENT_Y                          = (0, 0, 0, 0, 512, 512, 512, 512, 1024, 1024, 1024, 1024, 1536, 1536, 1536, 1536)
+  ROSETTA:SEGMENT_W                          = (512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512)
+  ROSETTA:SEGMENT_H                          = (512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512)
+  ROSETTA:ENCODING                           = (NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE)
+  ROSETTA:COMPRESSION_RATIO                  = (1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000)
+  ROSETTA:LOSSLESS_FLAG                      = (TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE)
+  ROSETTA:SPIHT_PYRAMID_LEVELS               = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+  ROSETTA:SPIHT_MEAN                         = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+  ROSETTA:SPIHT_MEAN_SHIFT                   = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+  ROSETTA:SPIHT_WAVE_LEVELS                  = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+  PIXEL_AVERAGING_WIDTH                      = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+  PIXEL_AVERAGING_HEIGHT                     = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+  ROSETTA:SMOOTH_FILTER_ID                   = (NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE)
+  ROSETTA:SQRT_FILTER_FLAG                   = (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
+END_GROUP                                  = SR_COMPRESSION
+
+/* SUBSYSTEM HARDWARE IDENTIFICATION */
+
+GROUP                                      = SR_HARDWARE_CONFIG
+  ROSETTA:DATA_PROCESSING_UNIT_ID            = FS
+  ROSETTA:POWER_CONVERTER_ID                 = FS
+  ROSETTA:MOTOR_CONTROLLER_ID                = FS
+  ROSETTA:NAC_CCD_READOUT_BOX_ID             = FM
+  ROSETTA:WAC_CCD_READOUT_BOX_ID             = FM
+  ROSETTA:NAC_CAMERA_ID                      = FM
+  ROSETTA:WAC_CAMERA_ID                      = FM
+END_GROUP                                  = SR_HARDWARE_CONFIG
+
+/* SYSTEM HEATER STATUS */
+
+GROUP                                      = SR_HEATER_STATUS
+  ROSETTA:CCD_HEATER_POWER                   = 0.000000 <W>
+  ROSETTA:NAC_MAIN_FDM_POWER                 = 3.988600 <W>
+  ROSETTA:NAC_RED_FDM_POWER                  = 0.000000 <W>
+  ROSETTA:NAC_MAIN_PPE_POWER                 = 1.709400 <W>
+  ROSETTA:NAC_RED_PPE_POWER                  = 0.000000 <W>
+  ROSETTA:WAC_MAIN_STR1_POWER                = 1.784880 <W>
+  ROSETTA:WAC_RED_STR1_POWER                 = 0.000000 <W>
+  ROSETTA:WAC_MAIN_STR2_POWER                = 3.173120 <W>
+  ROSETTA:WAC_RED_STR2_POWER                 = 0.000000 <W>
+END_GROUP                                  = SR_HEATER_STATUS
+
+/* POWER CONVERTER SWITCH STATUS */
+
+GROUP                                      = SR_SWITCH_STATUS
+  ROSETTA:WAC_SHUTFAILSAFEEXEC_FLAG          = OFF
+  ROSETTA:NAC_SHUTFAILSAFEEXEC_FLAG          = OFF
+  ROSETTA:WAC_DOORFAILSAFEEXEC_FLAG          = OFF
+  ROSETTA:NAC_DOORFAILSAFEEXEC_FLAG          = OFF
+  ROSETTA:PCM_PASSCTRLACTIVE_FLAG            = OFF
+  ROSETTA:WAC_SHUTFAILSAFE_ENAB_FLAG         = OFF
+  ROSETTA:WAC_SHUTTERPOWER_FLAG              = ON
+  ROSETTA:WAC_CCDANNEALHEATER_FLAG           = OFF
+  ROSETTA:WAC_CRB_PRIMEPOWER_FLAG            = ON
+  ROSETTA:NAC_SHUTFAILSAFE_ENAB_FLAG         = OFF
+  ROSETTA:NAC_SHUTTERPOWER_FLAG              = ON
+  ROSETTA:NAC_CCDANNEALHEATER_FLAG           = OFF
+  ROSETTA:NAC_CRB_PRIMEPOWER_FLAG            = ON
+  ROSETTA:WAC_STRUCTUREHEATER_R_FLAG         = OFF
+  ROSETTA:WAC_STRUCTUREHEATER_M_FLAG         = OFF
+  ROSETTA:WAC_RED_CALLAMP_FLAG               = OFF
+  ROSETTA:WAC_MAIN_CALLAMP_FLAG              = OFF
+  ROSETTA:WAC_DOORFAILSAFE_ENAB_FLAG         = OFF
+  ROSETTA:NAC_IFPLATEHEATER_R_FLAG           = OFF
+  ROSETTA:NAC_IFPLATEHEATER_M_FLAG           = OFF
+  ROSETTA:NAC_RED_CALLAMP_FLAG               = OFF
+  ROSETTA:NAC_MAIN_CALLAMP_FLAG              = OFF
+  ROSETTA:NAC_DOORFAILSAFE_ENAB_FLAG         = OFF
+  ROSETTA:MCB_RED_MOTORPOWER_FLAG            = OFF
+  ROSETTA:MCB_MAIN_MOTORPOWER_FLAG           = ON
+  ROSETTA:MCB_FLAG                           = MAIN
+  ROSETTA:PRIMARY_POWER_RAIL_FLAG            = MAIN
+END_GROUP                                  = SR_SWITCH_STATUS
+
+/* POWER SYSTEM STATUS */
+
+GROUP                                      = SR_POWER_STATUS
+  ROSETTA:V_28_MAIN                          = 28.445000 <V>
+  ROSETTA:V_28_REDUNDANT                     = 3.290000 <V>
+  ROSETTA:V_5                                = 5.220000 <V>
+  ROSETTA:V_3                                = 3.420000 <V>
+  ROSETTA:V_15                               = 14.960000 <V>
+  ROSETTA:V_M15                              = -14.960000 <V>
+  ROSETTA:V_NAC_REFERENCE                    = -9.892000 <V>
+  ROSETTA:V_WAC_REFERENCE                    = -9.956000 <V>
+  ROSETTA:CAMERA_V_24                        = 24.792207 <V>
+  ROSETTA:CAMERA_V_8                         = 8.282374 <V>
+  ROSETTA:CAMERA_V_M12                       = -12.268516 <V>
+  ROSETTA:CAMERA_V_5_ANALOG                  = 5.272397 <V>
+  ROSETTA:CAMERA_V_5_DIGITAL                 = 5.210672 <V>
+  ROSETTA:CAMERA_V_M5                        = -5.210905 <V>
+  ROSETTA:I_28_MAIN                          = 1750.880000 <mA>
+  ROSETTA:I_28_REDUNDANT                     = 0.000000 <mA>
+  ROSETTA:I_5                                = 2034.250000 <mA>
+  ROSETTA:I_3                                = 139.230000 <mA>
+  ROSETTA:I_15                               = 48.380000 <mA>
+  ROSETTA:I_M15                              = 41.170000 <mA>
+  ROSETTA:CAMERA_I_24                        = 17.687360 <mA>
+  ROSETTA:CAMERA_I_8                         = 12.665564 <mA>
+  ROSETTA:CAMERA_I_M12                       = 67.134585 <mA>
+  ROSETTA:CAMERA_I_5_ANALOG                  = 122.252573 <mA>
+  ROSETTA:CAMERA_I_5_DIGITAL                 = 129.551591 <mA>
+  ROSETTA:CAMERA_I_M5                        = 109.563479 <mA>
+END_GROUP                                  = SR_POWER_STATUS
+
+/* TEMPERATURE STATUS */
+
+GROUP                                      = SR_TEMPERATURE_STATUS
+  ROSETTA:T_MAIN_PCM                         = 299.892000 <K>
+  ROSETTA:T_REDUNDANT_PCM                    = 294.951000 <K>
+  ROSETTA:T_WAC_STRUCTURE_MAIN_1             = 284.933454 <K>
+  ROSETTA:T_WAC_STRUCTURE_REDUNDANT_1        = 285.695172 <K>
+  ROSETTA:T_WAC_STRUCTURE_MAIN_2             = 285.187360 <K>
+  ROSETTA:T_WAC_STRUCTURE_REDUNDANT_2        = 285.441266 <K>
+  ROSETTA:T_WAC3                             = 288.488138 <K>
+  ROSETTA:T_WAC4                             = 285.949078 <K>
+  ROSETTA:T_WAC_WHEEL_MOTOR_1                = 283.663924 <K>
+  ROSETTA:T_WAC_WHEEL_MOTOR_2                = 285.187360 <K>
+  ROSETTA:T_WAC_DOOR_MOTOR                   = 281.378770 <K>
+  ROSETTA:T_NAC_CCD_VIA_MCB                  = 202.414004 <K>
+  ROSETTA:T_WAC_CCD_VIA_MCB                  = 178.546840 <K>
+  ROSETTA:T_NAC_WHEEL_MOTOR_1                = 255.988170 <K>
+  ROSETTA:T_NAC_WHEEL_MOTOR_2                = 257.003794 <K>
+  ROSETTA:T_NAC_DOOR_MOTOR                   = 252.433486 <K>
+  ROSETTA:T_NAC_DOOR_IF_MAIN                 = 247.609272 <K>
+  ROSETTA:T_NAC_MIRROR_2                     = 222.980390 <K>
+  ROSETTA:T_NAC_PPE_IF_REDUNDANT             = 255.226452 <K>
+  ROSETTA:T_NAC_DOOR_IF_REDUNDANT            = 247.609272 <K>
+  ROSETTA:T_NAC_PPE_IF_MAIN                  = 254.972546 <K>
+  ROSETTA:T_NAC_MIRROR_1_AND_3               = 222.218672 <K>
+  ROSETTA:T_DSP_MAIN                         = 304.738122 <K>
+  ROSETTA:T_DSP_REDUNDANT                    = 295.597506 <K>
+  ROSETTA:T_BOARD_CONTROLLER                 = 299.660002 <K>
+  ROSETTA:T_BOARD_DRIVER                     = 297.374848 <K>
+  ROSETTA:CAMERA_TCCD                        = 149.693227 <K>
+  ROSETTA:CAMERA_T_SENSORHEAD                = 267.692267 <K>
+  ROSETTA:CAMERA_T_ADC_1                     = 290.730507 <K>
+  ROSETTA:CAMERA_T_ADC_2                     = 290.015467 <K>
+  ROSETTA:CAMERA_T_SHUTTER_MOTOR_1           = 255.344747 <K>
+  ROSETTA:CAMERA_T_SHUTTER_MOTOR_2           = 254.961067 <K>
+  ROSETTA:CAMERA_T_POWER_CONVERTER           = 311.693387 <K>
+  ROSETTA:CAMERA_T_DOSIMETER                 = 287.207627 <K>
+END_GROUP                                  = SR_TEMPERATURE_STATUS
+
+/* RADIATION ENVIRONMENT */
+
+GROUP                                      = SR_RADIATION_STATUS
+  ROSETTA:CAMERA_DOSIS                       = 465.179629 <rad>
+  ROSETTA:SREM_PROTONS_GT_20MEV              = 181
+  ROSETTA:SREM_PROTONS_50_TO_70MEV           = 2
+  ROSETTA:SREM_ELECTRONS_LT_2MEV             = "UNK"
+END_GROUP                                  = SR_RADIATION_STATUS
+OBJECT                                     = IMAGE
+  BANDS                                      = 1
+  FIRST_LINE                                 = 1
+  FIRST_LINE_SAMPLE                          = 1
+  INTERCHANGE_FORMAT                         = "BINARY"
+  LINES                                      = 2048
+  LINE_SAMPLES                               = 2048
+  SAMPLE_BITS                                = 32
+  SAMPLE_TYPE                                = PC_REAL
+  DERIVED_MINIMUM                            = -1.6499493e-005
+  DERIVED_MAXIMUM                            = 0.0059753000
+  MEAN                                       = 0.000670269
+  UNIT                                       = "W/[M^2 SR NM]"
+  SAMPLE_BIT_MASK                            = NULL
+END_OBJECT                                 = IMAGE
+OBJECT                                     = QUALITY_MAP_IMAGE
+  INTERCHANGE_FORMAT                         = "BINARY"
+  LINE_SAMPLES                               = 2048
+  LINES                                      = 2048
+  BANDS                                      = 1
+  SAMPLE_TYPE                                = LSB_UNSIGNED_INTEGER
+  SAMPLE_BITS                                = 8
+  DERIVED_MINIMUM                            = 0.00000000
+  DERIVED_MAXIMUM                            = 128.00000
+  MEAN                                       = 0.0783997
+  SAMPLE_BIT_MASK                            = NULL
+END_OBJECT                                 = QUALITY_MAP_IMAGE
+OBJECT                                     = SIGMA_MAP_IMAGE
+  INTERCHANGE_FORMAT                         = "BINARY"
+  LINE_SAMPLES                               = 2048
+  LINES                                      = 2048
+  BANDS                                      = 1
+  SAMPLE_TYPE                                = PC_REAL
+  SAMPLE_BITS                                = 32
+  DERIVED_MINIMUM                            = 0.45398438
+  DERIVED_MAXIMUM                            = 88.037720
+  MEAN                                       = 8.25579
+  SAMPLE_BIT_MASK                            = NULL
+END_OBJECT                                 = SIGMA_MAP_IMAGE
+END

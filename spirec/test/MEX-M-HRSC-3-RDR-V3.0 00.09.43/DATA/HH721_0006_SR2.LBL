@@ -1,0 +1,153 @@
+DS_VERSION_ID                    = PDS3
+
+/* FILE DATA ELEMENTS */
+
+RECORD_TYPE                       = FIXED_LENGTH
+RECORD_BYTES                      = 2014
+FILE_RECORDS                      = 1025
+LABEL_RECORDS                     = 5
+
+/* POINTERS TO DATA OBJECTS */
+
+^IMAGE_HEADER                     = 6
+^IMAGE                            = 9
+
+/* IDENTIFICATION DATA ELEMENTS */
+
+FILE_NAME                         = "HH721_0006_SR2.IMG"
+DATA_SET_ID                       = "MEX-M-HRSC-3-RDR-V3.0"
+DATA_SET_NAME                     = "MARS EXPRESS HRSC RADIOMETRIC RDR V3.0"
+DETECTOR_ID                       = MEX_HRSC_SRC
+EVENT_TYPE                        = "PHOBOS-STAR-ASTROMETRY-Ot"
+INSTRUMENT_HOST_ID                = MEX
+INSTRUMENT_HOST_NAME              = "MARS EXPRESS"
+INSTRUMENT_ID                     = HRSC
+INSTRUMENT_NAME                   = "HIGH RESOLUTION STEREO CAMERA"
+MISSION_NAME                      = "MARS EXPRESS"
+MISSION_PHASE_NAME                = ME_Phase_37
+PROCESSING_LEVEL_ID               = 2
+PRODUCT_CREATION_TIME             = 2018-06-28T10:30:20.000Z
+PRODUCT_ID                        = "HH721_0006_SR2.IMG"
+RELEASE_ID                        = 0143
+REVISION_ID                       = 0000
+
+/* TIME DATA ELEMENTS */
+
+SPACECRAFT_CLOCK_START_COUNT      = "1/0462832361.07325"
+SPACECRAFT_CLOCK_STOP_COUNT       = "1/0462832380.32437"
+IMAGE_TIME                        = 2017-12-31T20:33:01.278Z
+START_TIME                        = 2017-12-31T20:33:01.263Z
+STOP_TIME                         = 2017-12-31T20:33:01.293Z
+
+/* ORBITAL DATA ELEMENTS */
+
+ASCENDING_NODE_LONGITUDE          = 241.41
+MAXIMUM_RESOLUTION                = 33.169 <m/pixel>
+FOOTPRINT_POINT_LATITUDE          = (41.9519,43.9109,45.9181,49.9249,
+                                     52.4427,55.3255,58.3949,61.2657,63.2109
+                                     ,65.2364,68.6564,72.9681,74.818,77.1493
+                                     ,79.5136,81.6465,82.5123,82.8118,
+                                     82.3615,80.5187,76.5127,74.2868,71.3596
+                                     ,68.9676,65.8681,63.04,60.5202,58.2225,
+                                     54.5306,51.1248,48.4607,46.3122,43.4951
+                                     ,39.61,36.0263,33.0377,31.0335,27.656,
+                                     25.4066,25.5757,25.3013,24.7958,24.2015
+                                     ,23.3555,21.9592,19.7621,18.4808,
+                                     17.2228,15.9395,14.4487,12.8513,10.8779
+                                     ,8.74652,6.6053,5.03083,4.24303,3.17939
+                                     ,1.98583,-0.457147,-0.752764,-4.11036,
+                                     -8.59573,-11.0364,-13.738,-17.8713,
+                                     -22.6728,-15.9649,-9.49718,-3.04679,
+                                     3.4536,5.89908,6.65024,6.68459,7.21432,
+                                     8.26976,9.24228,10.0512,11.6119,12.4579
+                                     ,13.5003,14.6784,16.6098,18.1496,
+                                     20.0846,21.3123,21.3089,22.7224,21.898,
+                                     24.9259,24.0126,23.9499,25.0088,38.1117
+                                     ,37.4557,38.2372,38.2453,37.9966,
+                                     40.1041,40.3657,41.9519)
+FOOTPRINT_POINT_LONGITUDE         = (44.6023,45.2394,45.305,47.0559,48.1234
+                                     ,49.3303,51.0245,53.0755,54.7908,
+                                     56.6204,60.0713,65.7873,69.3759,75.0315
+                                     ,84.5995,103.334,119.519,144.962,
+                                     164.389,183.081,197.908,203.276,208.578
+                                     ,212.08,215.72,218.145,219.693,221.013,
+                                     222.556,223.918,225.083,226.064,227.408
+                                     ,229.318,230.853,232.126,232.989,
+                                     234.176,234.804,232.453,228.416,224.553
+                                     ,220.739,217.209,214.244,209.867,
+                                     206.891,204.032,201.337,198.882,196.592
+                                     ,194.522,192.565,190.677,188.054,
+                                     186.179,184.291,182.26,179.626,177.578,
+                                     174.695,171.413,167.619,162.835,155.989
+                                     ,143.716,125.51,122.364,120.296,119.334
+                                     ,116.909,113.891,110.733,107.974,
+                                     105.651,103.411,101.193,99.471,97.5118,
+                                     95.5937,93.8901,90.4686,86.7997,83.6547
+                                     ,80.02,77.7404,74.3497,71.5089,69.4121,
+                                     66.5282,62.1739,58.6186,64.0039,60.6047
+                                     ,55.6972,52.9006,49.9582,48.7422,
+                                     46.0732,44.6023)
+ORBIT_NUMBER                      = 17721
+ORBITAL_ECCENTRICITY              = 0.577
+ORBITAL_INCLINATION               = 86.96
+ORBITAL_SEMIMAJOR_AXIS            = 8852.99
+PERIAPSIS_ALTITUDE                = 353.29
+PERIAPSIS_ARGUMENT_ANGLE          = 166.17
+PERIAPSIS_TIME                    = 2017-12-31T22:28:27.000Z
+SPACECRAFT_ORIENTATION            = (0.0,-1.0,0.0)
+^MEX_ORIENTATION_DESC             = "MEX_ORIENTATION_DESC.TXT"
+SPACECRAFT_POINTING_MODE          = INERT
+^MEX_POINTING_DESC                = "MEX_POINTING_DESC.TXT"
+RIGHT_ASCENSION                   = 121.73
+DECLINATION                       = -24.086
+OFFSET_ANGLE                      = -1e+32
+SPACECRAFT_SOLAR_DISTANCE         = 2.44008e+08
+TARGET_NAME                       = PHOBOS
+
+/* CAMERA DATA ELEMENTS */
+
+BUFFER_MODE_ID                    = BUFFER_8
+EXPOSURE_DURATION                 = 30.24 <ms>
+INST_CMPRS_NAME                   = NONE
+INST_CMPRS_RATIO                  = 1.0
+INST_CMPRS_QUALITY                = -2147483648
+INST_CMPRS_QUANTZ_TBL_ID          = -2147483648
+INSTRUMENT_TEMPERATURE            = 5.15152 <degC>
+LINE_FIRST_PIXEL                  = 3
+MISSING_FRAMES                    = 0
+SAMPLE_FIRST_PIXEL                = 13
+START_BIT                         = 0
+
+/* RADIOMETRIC DATA ELEMENTS */
+
+BANDWIDTH                         = 250.0 <nm>
+CENTER_FILTER_WAVELENGTH          = 600.0 <nm>
+RADIANCE_OFFSET                   = -9.99e+31 <W*m**-2*sr**-1>
+RADIANCE_SCALING_FACTOR           = -9.99e+31 <W*m**-2*sr**-1>
+REFLECTANCE_SCALING_FACTOR        = -9.99e+31
+
+/* DATA OBJECT DEFINITIONS */
+
+OBJECT                            = IMAGE
+  INTERCHANGE_FORMAT              = BINARY
+  LINES                           = 1017
+  LINE_SAMPLES                    = 1007
+  SAMPLE_TYPE                     = MSB_INTEGER
+  SAMPLE_BITS                     = 16
+  BANDS                           = 1
+  BAND_STORAGE_TYPE               = BAND_SEQUENTIAL
+  MAXIMUM                         = 5557
+  MEAN                            = 124.627
+  MINIMUM                         = 0
+  STANDARD_DEVIATION              = 223.309
+END_OBJECT                        = IMAGE
+
+/* IMAGE HEADER DATA ELEMENTS */
+
+OBJECT                         = IMAGE_HEADER
+ HEADER_TYPE                   = VICAR2
+ INTERCHANGE_FORMAT            = ASCII
+ BYTES                         = 6042
+ ^DESCRIPTION                  = "VICAR2.TXT"
+END_OBJECT                     = IMAGE_HEADER
+END
